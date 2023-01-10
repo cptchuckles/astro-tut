@@ -1,6 +1,7 @@
 ---
-import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
 
 const pageTitle = "About Me";
 
@@ -79,5 +80,7 @@ const textCase = "uppercase";
 	? <p>My goal is to finish this in 3 days</p>
 	: <p>My goal is to finish this in at least more than 3 days because learning needs to be spaced out far enough for
 me to forget each step along the way or it doesn't really count.</p>}
+
+<Footer />
 </body>
 </html>
