@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageTitle = "About Me";
-
 const identity = {
 	nick: "Grendel",
 	handle: "CptChuckles",
@@ -33,7 +31,7 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle="About Me">
 	<style define:vars={{ skillColor, fontWeight, textCase }}>
 		.skill {
 			color: var(--skillColor);
