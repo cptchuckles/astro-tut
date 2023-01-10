@@ -1,4 +1,17 @@
 ---
+const pageTitle = "About Me";
+
+const identity = {
+	nick: "Grendel",
+	handle: "CptChuckles",
+	country: "The Internet",
+	occupation: "Computer programmer",
+	hobbies: ["programming", "gamedev", "scripting", "elden ring"],
+};
+
+const skills = [
+	"HTML", "CSS", "JavaScript", "Astro", "Rust", "C++", "Bash", "Linux",
+];
 ---
 
 <html lang="en">
@@ -7,16 +20,31 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/">Home</a>
 		<a href="/about/">About</a>
 		<a href="/blog/">Blog</a>
-		<h1>More of my astro site</h1>
-		<h1>About me</h1>
+
+		<h1>{pageTitle}</h1>
+
 		<h2>...and my new astro blog book webface site</h2>
+
 		<p>I am working through Astro's blog tutorial like the uncreative copy-pasta chef that I am</p>
 		<p>This site will be updated as I continue through the tutorial, which I have specified here as a caveat per the instructions found on said tutorial pages, since writing my own content is a brainmeats-taxing task that I simply don't have the time for.</p>
+
+		<p>Here are a few things about me:</p>
+
+		<ul>
+			<li>I am known as {identity.nick}, or as {identity.handle} on many online accounts</li>
+			<li>I live in {identity.country} and I work as a(n) {identity.occupation}</li>
+		</ul>
+
+		<p>My skills include, but are not limited to:</p>
+
+		<ul>
+			{skills.map((skill) => <li>{skill}</li>)}
+		</ul>
 	</body>
 </html>
