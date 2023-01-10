@@ -1,36 +1,17 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "My webface blog book site";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>About</title>
-	</head>
-	<body>
-		<Header />
+<BaseLayout pageTitle={pageTitle}>
+	<h2>This is my glob.</h2>
+	<h3>i hope u rike it uwu</h3>
 
-		<h1>blolg</h1>
-		<h1>This is my glob.</h1>
-		<h2>i hope u rike it uwu</h2>
+	<p>This is where I will link to my big-brain examples of intellect.</p>
 
-		<p>This is where I will link to my big-brain examples of intellect.</p>
-
-		<ul>
-			<li><a href="/posts/post-1">Post I: The Phantom Post</a></li>
-			<li><a href="/posts/post-2">Post II: Clone Posts</a></li>
-			<li><a href="/posts/post-3">Post III: Revenge of the Post</a></li>
-		</ul>
-
-		<Footer />
-
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+	<ul>
+		<li><a href="/posts/post-1">Post I: The Phantom Post</a></li>
+		<li><a href="/posts/post-2">Post II: Clone Posts</a></li>
+		<li><a href="/posts/post-3">Post III: Revenge of the Post</a></li>
+	</ul>
+</BaseLayout>
