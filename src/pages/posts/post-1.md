@@ -1,17 +1,14 @@
 ---
-title: My First Blog Post
+layout: ../../layouts/MarkdownPostLayout.astro
+title: My First Blog Post®™
 pubDate: 2023-01-09
 description: This is the first post of my new Astro blog
 author: CptChuckles
 image:
-	url: "https://astro.build/assets/blog/astro-1-release-update/cover.jpeg"
-	alt: "The Astro logo with the word One"
+  url: "https://astro.build/assets/blog/astro-1-release-update/cover.jpeg"
+  alt: "The Astro logo with the word One"
 tags: ["astro", "blogging", "learning in public"]
 ---
-# My First Blog Post®™
-
-Published on: {pubDate}
-
 Welcome to my _new blog_ about learning Astro! It's brand new and has never been attempted before by
 any mortal.
 
