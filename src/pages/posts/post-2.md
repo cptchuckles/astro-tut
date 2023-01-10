@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Second Blog Post
+title: "Post IInd: The Clone Posts"
 pubDate: 2023-01-09
 description: This is the first post of my new Astro blog
 author: CptChuckles
