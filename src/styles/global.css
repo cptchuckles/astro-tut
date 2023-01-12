@@ -25,7 +25,15 @@ h1 {
 	color: #fff;
 }
 
-.dark .nav-links a {
+.dark a {
+	color: orange;
+}
+.dark a:visited {
+	color: #840;
+}
+
+.dark .nav-links a,
+.dark .nav-links a:visited {
 	color: #fff;
 }
 
