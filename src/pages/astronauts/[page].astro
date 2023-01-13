@@ -7,6 +7,9 @@ export async function getStaticPaths({ paginate }) {
 		{ astronaut: "Buzz Aldrin" },
 		{ astronaut: "Sally Ride" },
 		{ astronaut: "John Glenn" },
+		{ astronaut: "Jebediah Kermin" },
+		{ astronaut: "Bob Kermin" },
+		{ astronaut: "Valentina Kermin" },
 	];
 
 	// Generate pages from our array of astronauts, with 2 to a page
@@ -22,4 +25,16 @@ const { page } = Astro.props;
 		<!--List the array of astronaut info-->
 		{page.data.map(({ astronaut }) => <li>{astronaut}</li>)}
 	</ul>
+	<div class="prev-next">
+		{page.url.prev ? <a href={page.url.prev}>&lt; Previous</a> : null}
+		{page.url.next ? <a href={page.url.next}>Next &gt;</a> : null}
+	</div>
 </BaseLayout>
+
+<style>
+.prev-next {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+}
+</style>
