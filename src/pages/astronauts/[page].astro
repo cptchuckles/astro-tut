@@ -20,14 +20,14 @@ const { page } = Astro.props;
 ---
 
 <BaseLayout pageTitle="Astronauts">
-	<h2>Page {page.currentPage}</h2>
 	<ul>
 		<!--List the array of astronaut info-->
 		{page.data.map(({ astronaut }) => <li>{astronaut}</li>)}
 	</ul>
 	<div class="prev-next">
-		{page.url.prev ? <a href={page.url.prev}>&lt; Previous</a> : null}
-		{page.url.next ? <a href={page.url.next}>Next &gt;</a> : null}
+		<span>{page.url.prev ? <a href={page.url.prev}>&lt; Previous</a> : null}</span>
+		<span>{page.currentPage} / {page.lastPage}</span>
+		<span>{page.url.next ? <a href={page.url.next}>Next &gt;</a> : null}</span>
 	</div>
 </BaseLayout>
 
@@ -35,6 +35,9 @@ const { page } = Astro.props;
 .prev-next {
 	display: flex;
 	width: 100%;
-	justify-content: space-around;
+}
+.prev-next span {
+	width: calc(100% / 3);
+	text-align: center;
 }
 </style>
